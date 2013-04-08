@@ -1,0 +1,23 @@
+{
+    "name":         "sprain/validator-bundle",
+    "version":      "1.0.0-dev",
+    "description":  "A collection of validators for Symfony2",
+    "keywords":     ["validation"],
+    "type":         "symfony-bundle",
+    "license":      "MIT",
+    "authorsa":     [
+        {
+            "name":     "Manuel Reinhard",
+            "email":    "manu@sprain.ch",
+            "homepage": "http://www.sprain.ch"
+        }
+    ],
+    "require":      {
+        "php":                  ">=5.3.3",
+        "symfony/validator":    ">=2.1"
+    },
+    "autoload": {
+        "psr-0": { "Sprain\\ValidatorBundle": "" }
+    },
+    "target-dir": "Sprain/ValidatorBundle"
+}
