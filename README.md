@@ -27,7 +27,7 @@ Basically you need to
 
 * Create the validator.
 * Write some tests for it.
-* Extend the documnentation.
+* Extend the documentation.
 
 The workflow in Git is just the way it is if you contribute to the Symfony2 core. [Read more here.](http://symfony.com/doc/current/contributing/code/patches.html)
 
