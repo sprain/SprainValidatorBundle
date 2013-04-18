@@ -54,13 +54,9 @@ class IbanValidatorTest extends \PHPUnit_Framework_TestCase
     public function getValidIbans()
     {
         return array(
-            array('CH93 0076 2011 6238 5295 7'), //Switzerland
-            array('CH9300762011623852957'), // Switzerland without spaces
 
-            //Country list
+            //Europe
             //http://www.rbs.co.uk/corporate/international/g0/guide-to-international-business/regulatory-information/iban/iban-example.ashx
-            // array('GB29 RBOS 6016 1331 9268 19'), //United Kingdom -- currently fails!
-
             array('AL47 2121 1009 0000 0002 3569 8741'), //Albania
             array('AD12 0001 2030 2003 5910 0100'), //Andorra
             array('AT61 1904 3002 3457 3201'), //Austria
@@ -115,6 +111,53 @@ class IbanValidatorTest extends \PHPUnit_Framework_TestCase
             array('TN59 1000 6035 1835 9847 8831'), //Tunisia
             array('TR33 0006 1005 1978 6457 8413 26'), //Turkey
             array('AE07 0331 2345 6789 0123 456'), //UAE
+
+            //Some extra tests for UK IBANs
+            //https://github.com/sprain/SprainValidatorBundle/issues/1
+            array('GB 12 CPBK 0892 9965 0449 91'), //United Kingdom
+            array('GB 29 NWBK 6016 1331 9268 19'), //United Kingdom
+            array('GB 54 BARC 2099 2012 3456 78'), //United Kingdom
+            array('GB 35 MIDL 4025 3432 1446 70'), //United Kingdom
+            array('GB 19 LOYD 3096 1700 7099 43'), //United Kingdom
+            array('GB 83 MIDL 4020 4452 0069 01'), //United Kingdom
+            array('GB 08 BOFS 1211 0312 2011 86'), //United Kingdom
+            #array('GB 29 RBOS 6016 1331 9268 19'), //United Kingdom -fails! Is it actually a wrong example on rbs.co.uk?
+
+            //Extended country list
+            //http://www.nordea.com/Our+services/International+products+and+services/Cash+Management/IBAN+countries/908462.html
+            array('AO06000600000100037131174'), //Angola
+            array('AZ21NABZ00000000137010001944'), //Azerbaijan
+            array('BH29BMAG1299123456BH00'), //Bahrain
+            array('BJ11B00610100400271101192591'), //Benin
+            array('VG96VPVG0000012345678901'), //British Virgin Islands
+            array('BF1030134020015400945000643'), //Burkina Faso
+            array('BI43201011067444'), //Burundi
+            array('CM2110003001000500000605306'), //Cameroon
+            array('CV64000300004547069110176'), //Cape Verde
+            array('FR7630007000110009970004942'), //Central African Republic
+            array('CG5230011000202151234567890'), //Congo
+            array('CR0515202001026284066'), //Costa Rica
+            array('DO28BAGR00000001212453611324'), //Dominican Republic
+            array('GT82TRAJ01020000001210029690'), //Guatemala
+            array('IR580540105180021273113007'), //Iran
+            array('IL620108000000099999999'), //Israel
+            array('CI05A00060174100178530011852'), //Ivory Coast
+            array('KZ176010251000042993'), //Kazakhstan
+            array('KW74NBOK0000000000001000372151'), //Kuwait
+            array('LB30099900000001001925579115'), //Lebanon
+            array('MG4600005030010101914016056'), //Madagascar
+            array('ML03D00890170001002120000447'), //Mali
+            array('MR1300012000010000002037372'), //Mauritania
+            array('MU17BOMM0101101030300200000MUR'), //Mauritius
+            array('MZ59000100000011834194157'), //Mozambique
+            array('PS92PALS000000000400123456702'), //Palestinian Territory
+            array('PT50000200000163099310355'), //Sao Tome and Principe
+            array('SA0380000000608010167519'), //Saudi Arabia
+            array('SN12K00100152000025690007542'), //Senegal
+            array('TN5914207207100707129648'), //Tunisia
+            array('TR330006100519786457841326'), //Turkey
+            array('AE260211000000230064016'), //United Arab Emirates
+
         );
     }
 
@@ -146,6 +189,9 @@ class IbanValidatorTest extends \PHPUnit_Framework_TestCase
             array('NL39 RASO 0300 0652 64'),
             array('NO93 8601117 947'),
             array('CY170020 128 0000 0012 0052 7600'),
+            array('TN591420720710070719648'),
+            array('TR33000610051978647841326'),
+            array('AE260211000000230064016U'),
             array('foo'),
             array('123'),
         );
