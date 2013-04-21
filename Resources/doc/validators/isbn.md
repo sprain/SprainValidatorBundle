@@ -3,6 +3,8 @@ SprainValidatorBundle
 
 ## ISBN Validator (International Standard Book Number)
 
+**AN ISBN VALIDATOR HAS BEEN ADDED TO CORE IN SYMFONY 2.3.**
+
 ### Definition
 
 The International Standard Book Number (ISBN) is a unique numeric commercial book identifier. There are two versions: ISBN-10 and ISBN-13. ([Wikipedia](http://en.wikipedia.org/wiki/International_Standard_Book_Number))

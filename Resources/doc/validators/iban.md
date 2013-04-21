@@ -3,6 +3,8 @@ SprainValidatorBundle
 
 ## IBAN Validator (International Bank Account Number)
 
+**THIS EXACT IBAN VALIDATOR HAS BEEN ADDED TO CORE IN SYMFONY 2.3**
+
 ### Definition
 
 The International Bank Account Number (IBAN) is an internationally agreed means of identifying bank accounts across national borders ([Wikipedia](http://en.wikipedia.org/wiki/International_Bank_Account_Number))
